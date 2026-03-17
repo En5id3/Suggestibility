@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestibility Assessment | Dr. Pradeep Kumar</title>
+    <meta name="description"
+        content="Discover your suggestibility profile with this comprehensive Physical and Emotional Suggestibility Questionnaire based on Dr. Pradeep Kumar's research.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">✦</span>
+            <span class="nav-title">Suggestibility</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#questionnaire-section" class="nav-link">Assessment</a>
+            <a href="#laws-section" class="nav-link">Laws</a>
+            <a href="#about-section" class="nav-link">About</a>
+        </div>
+        <div class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">
+            <span class="lang-option" id="lang-en" data-active="true">EN</span>
+            <span class="lang-slider"></span>
+            <span class="lang-option" id="lang-hi">हि</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge" data-en="Dr. Pradeep Kumar's Research" data-hi="डॉ. प्रदीप कुमार का शोध">Dr. Pradeep
+                Kumar's Research</div>
+            <h1 class="hero-title" data-en="Discover Your Suggestibility Profile"
+                data-hi="अपनी सुझावग्राह्यता प्रोफ़ाइल जानें">
+                Discover Your<br>
+                <span class="gradient-text">Suggestibility</span> Profile
+            </h1>
+            <p class="hero-subtitle"
+                data-en="Explore the fascinating science of hypnotic suggestibility. Take two comprehensive questionnaires to determine your Physical and Emotional Suggestibility percentages, and learn how these traits influence your responsiveness to hypnotic techniques."
+                data-hi="सम्मोहन सुझावग्राह्यता के आकर्षक विज्ञान का अन्वेषण करें। अपने शारीरिक और भावनात्मक सुझावग्राह्यता प्रतिशत निर्धारित करने के लिए दो व्यापक प्रश्नावलियाँ भरें।">
+                Explore the fascinating science of hypnotic suggestibility. Take two comprehensive questionnaires
+                to determine your Physical and Emotional Suggestibility percentages, and learn how these traits
+                influence your responsiveness to hypnotic techniques.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" onclick="scrollToSection('questionnaire-section')">
+                    <span data-en="Begin Assessment" data-hi="मूल्यांकन शुरू करें">Begin Assessment</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('laws-section')">
+                    <span data-en="Learn the Laws" data-hi="नियम जानें">Learn the Laws</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">36</span>
+                    <span class="stat-label" data-en="Questions" data-hi="प्रश्न">Questions</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-en="Dimensions" data-hi="आयाम">Dimensions</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">5 min</span>
+                    <span class="stat-label" data-en="Duration" data-hi="अवधि">Duration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questionnaire Section -->
+    <section id="questionnaire-section" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-en="Assessment" data-hi="मूल्यांकन">Assessment</span>
+                <h2 class="section-title" data-en="Suggestibility Questionnaire" data-hi="सुझावग्राह्यता प्रश्नावली">
+                    Suggestibility Questionnaire</h2>
+                <p class="section-subtitle"
+                    data-en="Please answer honestly based on your natural tendencies. Consider how you might have interacted during your teenage years in those situations."
+                    data-hi="कृपया अपनी स्वाभाविक प्रवृत्तियों के आधार पर ईमानदारी से उत्तर दें। सोचें कि आपने किशोरावस्था में उन परिस्थितियों में कैसे प्रतिक्रिया दी होगी।">
+                    Please answer honestly based on your natural tendencies. Consider how you might have interacted
+                    during your teenage years in those situations.
+                </p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container" id="progress-container" style="display: none;">
+                <div class="progress-info">
+                    <span id="progress-label">Questionnaire 1 of 2</span>
+                    <span id="progress-count">0 / 18</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Start Card -->
+            <div class="start-card" id="start-card">
+                <div class="start-card-inner">
+                    <div class="start-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Ready to begin?" data-hi="शुरू करने के लिए तैयार हैं?">Ready to begin?</h3>
+                    <p>You'll answer 36 questions across two questionnaires. Each question requires a simple
+                        <strong>YES</strong> or <strong>NO</strong> answer. The assessment takes approximately 5
+                        minutes.
+                    </p>
+                    <div class="scoring-info">
+                        <h4>Scoring Method</h4>
+                        <ul>
+                            <li>Questions 1 & 2 in each questionnaire: <strong>10 points</strong> each for YES</li>
+                            <li>Questions 3–18 in each questionnaire: <strong>5 points</strong> each for YES</li>
+                            <li>Physical Suggestibility: A / (A + B) × 100</li>
+                            <li>Emotional Suggestibility: 100 – PS%</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="startQuestionnaire()">
+                        <span data-en="Start Assessment" data-hi="मूल्यांकन शुरू करें">Start Assessment</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Questionnaire 1 -->
+            <div class="questionnaire" id="questionnaire-1" style="display: none;">
+                <div class="questionnaire-header">
+                    <div class="q-badge q-badge-physical" data-en="Physical Suggestibility"
+                        data-hi="शारीरिक सुझावग्राह्यता">Physical Suggestibility</div>
+                    <h3 class="q-title" data-en="Questionnaire 1" data-hi="प्रश्नावली 1">Questionnaire 1</h3>
+                    <p class="q-desc">"YES" answers are indicative of <strong>Physical Suggestibility</strong> — they
+                        reveal physical suggestible behaviour.</p>
+                </div>
+                <div class="questions-list" id="questions-1"></div>
+                <div class="questionnaire-actions">
+                    <button class="btn btn-primary btn-lg" id="next-btn-1" onclick="goToQuestionnaire2()" disabled>
+                        <span data-en="Continue to Questionnaire 2" data-hi="प्रश्नावली 2 पर जाएँ">Continue to
+                            Questionnaire 2</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Questionnaire 2 -->
+            <div class="questionnaire" id="questionnaire-2" style="display: none;">
+                <div class="questionnaire-header">
+                    <div class="q-badge q-badge-emotional" data-en="Emotional Suggestibility"
+                        data-hi="भावनात्मक सुझावग्राह्यता">Emotional Suggestibility</div>
+                    <h3 class="q-title" data-en="Questionnaire 2" data-hi="प्रश्नावली 2">Questionnaire 2</h3>
+                    <p class="q-desc">"YES" answers are indicative of <strong>Emotional Suggestibility</strong> — they
+                        reveal emotional suggestible behaviour.</p>
+                </div>
+                <div class="questions-list" id="questions-2"></div>
+                <div class="questionnaire-actions">
+                    <button class="btn btn-outline" onclick="goBackToQuestionnaire1()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                        <span data-en="Back to Q1" data-hi="Q1 पर वापस">Back to Q1</span>
+                    </button>
+                    <button class="btn btn-primary btn-lg" id="submit-btn" onclick="calculateResults()" disabled>
+                        <span data-en="Calculate Results" data-hi="परिणाम गणना करें">Calculate Results</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h3 class="results-title">Your Suggestibility Profile</h3>
+                    <p class="results-subtitle">Based on your responses to both questionnaires</p>
+                </div>
+
+                <div class="results-grid">
+                    <!-- Gauge Card -->
+                    <div class="result-card gauge-card">
+                        <div class="gauge-container">
+                            <canvas id="gauge-canvas" width="300" height="300"></canvas>
+                            <div class="gauge-center">
+                                <span class="gauge-value" id="gauge-ps-value">0%</span>
+                                <span class="gauge-label">Physical</span>
+                            </div>
+                        </div>
+                        <div class="gauge-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot physical"></span>
+                                <span>Physical: <strong id="ps-percent">0%</strong></span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot emotional"></span>
+                                <span>Emotional: <strong id="es-percent">0%</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scores Card -->
+                    <div class="result-card scores-card">
+                        <h4>Score Breakdown</h4>
+                        <div class="score-row">
+                            <span class="score-label">Questionnaire 1 (Physical)</span>
+                            <span class="score-value" id="score-a">0</span>
+                        </div>
+                        <div class="score-bar-container">
+                            <div class="score-bar score-bar-physical" id="score-bar-a"></div>
+                        </div>
+                        <div class="score-row">
+                            <span class="score-label">Questionnaire 2 (Emotional)</span>
+                            <span class="score-value" id="score-b">0</span>
+                        </div>
+                        <div class="score-bar-container">
+                            <div class="score-bar score-bar-emotional" id="score-bar-b"></div>
+                        </div>
+                        <div class="score-divider"></div>
+                        <div class="score-row total">
+                            <span class="score-label">Combined Total</span>
+                            <span class="score-value" id="score-combined">0</span>
+                        </div>
+                        <div class="formula-box">
+                            <p>PS = A / (A + B) × 100 = <strong id="formula-result"></strong></p>
+                            <p>ES = 100 – PS = <strong id="formula-result-es"></strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Interpretation Card -->
+                    <div class="result-card interpretation-card" id="interpretation-card">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-outline" onclick="restartAssessment()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="1 4 1 10 7 10" />
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                        </svg>
+                        <span data-en="Retake Assessment" data-hi="पुनः मूल्यांकन करें">Retake Assessment</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laws of Suggestibility Section -->
+    <section id="laws-section" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Theory</span>
+                <h2 class="section-title">Laws of Suggestibility</h2>
+                <p class="section-subtitle">
+                    These laws outline principles that help explain how and why people respond to hypnotic suggestions,
+                    developed by early hypnotists and psychologists.
+                </p>
+            </div>
+
+            <div class="laws-grid">
+                <div class="law-card" data-aos="fade-up">
+                    <div class="law-number">01</div>
+                    <h3 class="law-title">Law of Concentrated Attention</h3>
+                    <p class="law-desc">The more one concentrates on a particular idea or suggestion, the more likely it
+                        is to be accepted and acted upon. Focused attention enhances the absorption of the suggestion.
+                    </p>
+                    <div class="law-example">
+                        <span class="example-tag">Example</span>
+                        <p>If a hypnotist asks a subject to focus intensely on the idea of their hand feeling warm, the
+                            subject's concentrated attention on that sensation can cause the hand to actually feel
+                            warmer. The more the subject concentrates, the more likely they are to experience the
+                            suggested warmth.</p>
+                    </div>
+                </div>
+
+                <div class="law-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="law-number">02</div>
+                    <h3 class="law-title">Law of Reversed Effect</h3>
+                    <p class="law-desc">The harder one tries to do something, the less they are able to do it. This
+                        often occurs when conscious effort conflicts with the subconscious will.</p>
+                    <div class="law-example">
+                        <span class="example-tag">Example</span>
+                        <p>When trying to fall asleep, the more you consciously try to sleep, the harder it becomes.
+                            Similarly, under hypnosis, if a subject tries too hard to resist a suggestion, they may find
+                            it even more difficult to do so.</p>
+                    </div>
+                </div>
+
+                <div class="law-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="law-number">03</div>
+                    <h3 class="law-title">Law of Dominant Effect</h3>
+                    <p class="law-desc">A stronger emotion tends to replace a weaker one. By attaching a strong emotion
+                        to a suggestion, the suggestion is more likely to be accepted.</p>
+                    <div class="law-example">
+                        <span class="example-tag">Example</span>
+                        <p>A hypnotist might attach a feeling of intense calm and safety to the suggestion of overcoming
+                            a phobia. The stronger emotion of safety can override the weaker emotion of fear related to
+                            the phobia.</p>
+                    </div>
+                </div>
+
+                <div class="law-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="law-number">04</div>
+                    <h3 class="law-title">Law of Repetition</h3>
+                    <p class="law-desc">Repeating a suggestion increases its effectiveness. Repetition helps reinforce
+                        the suggestion in the mind, making it more likely to be accepted and acted upon.</p>
+                    <div class="law-example">
+                        <span class="example-tag">Example</span>
+                        <p>A hypnotist might repeatedly suggest relaxation and calm during a session. The more times the
+                            suggestion is made, the deeper the relaxation and the more likely the subject is to carry it
+                            over into their daily life.</p>
+                    </div>
+                </div>
+
+                <div class="law-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="law-number">05</div>
+                    <h3 class="law-title">Law of Association</h3>
+                    <p class="law-desc">When a suggestion is linked to a familiar concept or past experience, it is more
+                        easily accepted. The mind can more readily process and internalize suggestions with existing
+                        associations.</p>
+                    <div class="law-example">
+                        <span class="example-tag">Example</span>
+                        <p>A hypnotist might suggest that the feeling of warmth from sunlight is similar to the warmth
+                            of confidence. By associating confidence with the familiar, pleasant sensation of sunlight,
+                            the suggestion is more likely to be accepted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Altering Hypnosis to Suggestibility -->
+    <section id="about-section" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Application</span>
+                <h2 class="section-title">Altering Hypnosis to Suggestibility</h2>
+                <p class="section-subtitle">
+                    Understanding whether a person is more physically or emotionally suggestible helps hypnotists choose
+                    the most effective techniques and suggestions.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card physical-card">
+                    <div class="about-card-header">
+                        <div class="about-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M18 20V10M12 20V4M6 20v-6" />
+                            </svg>
+                        </div>
+                        <h3>Physically Suggestible Individuals</h3>
+                    </div>
+                    <p>Hypnotists might use more <strong>concrete, sensory, and direct</strong> suggestions for these
+                        individuals.</p>
+                    <div class="technique-list">
+                        <h4>Effective Techniques</h4>
+                        <ul>
+                            <li>Progressive relaxation</li>
+                            <li>Arm levitation</li>
+                            <li>Direct physical suggestions</li>
+                            <li>Sensory-focused imagery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-card emotional-card">
+                    <div class="about-card-header">
+                        <div class="about-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <h3>Emotionally Suggestible Individuals</h3>
+                    </div>
+                    <p>Hypnotists might use more <strong>abstract, emotional, and indirect</strong> suggestions for
+                        these individuals.</p>
+                    <div class="technique-list">
+                        <h4>Effective Techniques</h4>
+                        <ul>
+                            <li>Visualization</li>
+                            <li>Metaphorical language</li>
+                            <li>Emotionally charged narratives</li>
+                            <li>Indirect suggestion methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-conclusion">
+                <p>By recognizing and adapting to an individual's type of suggestibility, hypnotists can <strong>enhance
+                        the effectiveness</strong> of their sessions and achieve <strong>better therapeutic
+                        outcomes</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="nav-icon">✦</span>
+                    <span>Suggestibility Assessment</span>
+                </div>
+                <p class="footer-credit">Based on research by <strong>Dr. Pradeep Kumar</strong> — The Comprehensive
+                    Guide to Basic Hypnosis, Chapter 4</p>
+                <p class="footer-note">This tool is for educational purposes only and is not a substitute for
+                    professional psychological assessment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
