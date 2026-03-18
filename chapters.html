@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters | Suggestibility Assessment</title>
+    <meta name="description"
+        content="Study chapters on Clinical Hypnosis from Dr. Pradeep Kumar's Advanced Diploma in Hypnotherapy course.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapters-style.css">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+                <span class="nav-icon">✦</span>
+                <span class="nav-title">Suggestibility</span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#questionnaire-section" class="nav-link">Assessment</a>
+            <a href="chapters.html" class="nav-link active">Chapters</a>
+            <a href="index.html#laws-section" class="nav-link">Laws</a>
+        </div>
+    </nav>
+
+    <!-- Chapters Layout -->
+    <div class="chapters-layout">
+        <!-- Sidebar -->
+        <aside class="chapters-sidebar" id="chapters-sidebar">
+            <div class="sidebar-header">
+                <h3>Study Material</h3>
+                <p>BSH Advanced Diploma in Hypnotherapy</p>
+            </div>
+            <div class="sidebar-search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="M21 21l-4.35-4.35" />
+                </svg>
+                <input type="text" id="chapter-search" placeholder="Search chapters..."
+                    oninput="filterChapters(this.value)">
+            </div>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <!-- Filled by JS -->
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar Toggle -->
+        <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+        </button>
+
+        <!-- Content Area -->
+        <main class="chapters-content" id="chapters-content">
+            <!-- Landing state -->
+            <div class="chapters-landing" id="chapters-landing">
+                <div class="landing-icon">📖</div>
+                <h2>Clinical Hypnosis — Study Chapters</h2>
+                <p>Comprehensive study material from Dr. Pradeep Kumar's Advanced Diploma in Hypnotherapy course
+                    (February 2026). Select a chapter from the sidebar to begin reading.</p>
+                <div class="chapters-grid" id="chapters-grid">
+                    <!-- Chapter cards filled by JS -->
+                </div>
+            </div>
+
+            <!-- Chapter View -->
+            <div class="chapter-view" id="chapter-view" style="display:none;">
+                <div class="chapter-topbar">
+                    <button class="btn btn-outline btn-sm" onclick="showLanding()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                        All Chapters
+                    </button>
+                    <div class="chapter-nav-btns">
+                        <button class="btn btn-outline btn-sm" id="prev-ch-btn" onclick="navigateChapter(-1)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                            Prev
+                        </button>
+                        <button class="btn btn-outline btn-sm" id="next-ch-btn" onclick="navigateChapter(1)">
+                            Next
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chapter-header" id="chapter-header">
+                    <!-- Filled by JS -->
+                </div>
+                <article class="chapter-body" id="chapter-body">
+                    <!-- Filled by JS -->
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="position:relative;z-index:1;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="nav-icon">✦</span>
+                    <span>Suggestibility Assessment</span>
+                </div>
+                <p class="footer-credit">Based on research by <strong>Dr. Pradeep Kumar</strong> — The Comprehensive
+                    Guide to Basic Hypnosis</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chapters.js"></script>
+    <script src="chapters-app.js"></script>
+</body>
+
+</html>
