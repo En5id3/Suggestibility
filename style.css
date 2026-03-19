@@ -1346,3 +1346,212 @@ body {
         font-size: 2rem;
     }
 }
+
+/* ===== Hero Image ===== */
+.hero-image {
+    max-width: 480px;
+    margin: -20px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-xl);
+    opacity: 0.85;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+}
+
+/* ===== Video Grid ===== */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.video-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: var(--transition-fast);
+}
+
+.video-card:hover {
+    border-color: var(--border-color-active);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.video-card-featured {
+    grid-column: 1 / -1;
+}
+
+.video-card-featured .video-embed {
+    padding-bottom: 45%;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: 20px 24px 24px;
+}
+
+.video-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-physical);
+    background: rgba(108, 99, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.video-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.video-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===== Section Banner ===== */
+.section-banner {
+    max-width: 600px;
+    margin: -20px auto 48px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.section-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+}
+
+/* ===== Section Video ===== */
+.section-video {
+    margin-top: 64px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-video-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* ===== Law Detail ===== */
+.law-detail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ===== About Card Image ===== */
+.about-card-image {
+    margin: -24px -28px 20px;
+    overflow: hidden;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.about-card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* ===== About Traits ===== */
+.about-traits {
+    margin-bottom: 20px;
+}
+
+.about-traits h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.about-traits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-traits li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+.about-traits li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    color: var(--accent-physical);
+}
+
+.emotional-card .about-traits li::before {
+    color: var(--accent-emotional);
+}
+
+/* ===== Videos Grid Responsive ===== */
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card-featured .video-embed {
+        padding-bottom: 56.25%;
+    }
+
+    .hero-image {
+        max-width: 320px;
+    }
+
+    .section-banner {
+        max-width: 100%;
+    }
+
+    .about-card-image img {
+        height: 160px;
+    }
+}
